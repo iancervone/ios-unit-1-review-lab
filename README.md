@@ -37,6 +37,62 @@ Britain is a history of repeated injuries and usurpations, all having in direct 
 establishment of an absolute Tyranny over these States. To prove this, let Facts be submitted to a
 candid world.
 """
+
+
+
+print(arrayDOI)
+
+
+//this gives you just the letters of the alphabet
+
+var justLetters = CharacterSet.letters
+var punctuation = CharacterSet.punctuationCharacters
+
+var newArray = declarationOfIndependence.split(separator: " ")
+
+var cleanArray = [String]()
+
+
+
+var DOI = declarationOfIndependence.replacingOccurrences(of: ".", with: "")
+DOI = DOI.replacingOccurrences(of: ",", with: "")
+DOI = DOI.replacingOccurrences(of: ";", with: "")
+DOI = DOI.replacingOccurrences(of: "-", with: "")
+var arrayDOI = DOI.split(separator: " ")
+
+
+
+for i in arrayDOI {
+i.removeAll(where: "\n"}
+
+}
+
+
+//var new = otherstring.stringByTrimmingCharactersInSet(NSCharacterSet.init(charactersInString: "la t, \n \" ':"))
+
+print(cleanArray)
+
+//arrayDOI = arrayDOI.replacingOccurrences(of: "\n", with: "",
+
+
+//for i in arrayDOI {
+//    if i == "." || i == "," || i == ";" {
+//        cleanArray.append(i)
+//    }
+//}
+//
+//.stringByReplacingOccurrencesOfString
+
+
+//    for i in arrayDOI {
+//    if justLetters.contains(i.unicodeScalars.first!) {
+//    cleanArray.append(i)
+//    }
+//}
+
+
+
+
 ```
 
 ## Question 2
@@ -47,6 +103,63 @@ Make an array that contains all elements that appear more than twice in someRepe
 ```swift
 var someRepeatsAgain = [25,11,30,31,50,28,4,37,13,20,24,38,28,14,44,33,7,43,39,35,36,42,1,40,7,14,23,46,21,39,11,42,12,38,41,48,20,23,29,24,50,41,38,23,11,30,50,13,13,16,10,8,3,43,10,20,28,39,24,36,21,13,40,25,37,39,31,4,46,20,38,2,7,11,11,41,45,9,49,31,38,23,41,16,49,29,14,6,6,11,5,39,13,17,43,1,1,15,25]
 ```
+someRepeatsAgain.reduce(function (acc, curr) {
+if (typeof acc[curr] == 'undefined') {
+acc[curr] = 1;
+} else {
+acc[curr] += 1;
+}
+
+return acc;
+}, {});
+
+func countInArray(array, what) {
+return array.filter(
+var count = 0;
+for (var i = 0; i < arr.length; i++) {
+if (array[i] === what) {
+count++;
+}
+}
+return count;
+}
+countInArray(someRepeatsAgain, 1)
+
+print(someRepeatsAgain.sorted())
+var double: [Int] = []
+var triple: [Int] = []
+
+for num1 in someRepeatsAgain.sorted() {
+if num1 == someRepeatsA {
+double.append(num1)
+}
+}
+
+for num3 in double {
+if num3 == num3 {
+triple.append(num3)
+}
+
+}
+
+//var doublesArray = someRepeatsAgain.sorted(by: {$0 < $1})
+//for $0,$1 in doublesArray {
+//    if
+//}
+//doublesArray = doublesArray.sorted(by: {<#T##(Int, Int) throws -> Bool#>})
+//
+////for num in someRepeatsAgain {
+////    for sameNum in someRepeatsAgain {
+////        if num == sameNum {
+////            doublesArray.append(num)
+////        }
+////    }
+////}
+//
+//print(doublesArray)
+
+
+
 
 ## Question 3
 
@@ -55,6 +168,25 @@ Identify if there are 3 integers in the following array that sum to 10. If so, p
 ```swift
 var tripleSumArr = [-20,-14, -8,-5,-3,-2,1,2,3,4,9,15,20,30]
 ```
+
+
+
+func intsToStrings(arr: [Int], closure: (Int) -> String) -> [String] {
+var stringArray = [String]()
+for num in arr {
+stringArray += [closure(num)]
+}
+return stringArray
+}
+let aString = {(x: Int) -> String in
+return String(x)
+}
+print(intsToStrings(arr: theInts, closure: aString))
+
+print(theInts.map({(x) -> String in
+return String(x)
+}))
+
 
 
 ## Question 3
